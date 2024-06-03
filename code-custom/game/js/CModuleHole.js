@@ -126,7 +126,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#EE835D"); // custom: right light 1K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -134,7 +134,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+60, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#EE835D"); // custom: right light 5K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -142,7 +142,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+120, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 36, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 36, "#EE835D"); // custom: right light 10K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -150,7 +150,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+180, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 34, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 34, "#EE835D"); // custom: right light 50K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -158,7 +158,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+240, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#EE835D"); // custom: right light 100K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -166,7 +166,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+300, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#EE835D"); // custom: right light 500K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -174,7 +174,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_2');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+360, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 50, "#ff4040");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 50, "#EE835D"); // custom: right light 1M
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;

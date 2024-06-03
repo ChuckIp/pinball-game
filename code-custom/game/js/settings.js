@@ -12,7 +12,7 @@ var GAME_NAME = "pinball";
 var PRIMARY_FONT = "walibi0615bold";
 var SECONDARY_FONT = "Digital";
 
-var PRIMARY_FONT_COLOUR = "#fff600";
+var PRIMARY_FONT_COLOUR = "#DBF0FB";
 
 var SOUNDTRACK_VOLUME_IN_GAME = 1; 
 
