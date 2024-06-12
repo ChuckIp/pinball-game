@@ -160,7 +160,7 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("star","./sprites/star.png");
         
         
-        s_oSpriteLibrary.addSprite("pinball_bg","./sprites/pinball_elements/pinball_bg.jpg");
+        s_oSpriteLibrary.addSprite("pinball_bg","./sprites/pinball_elements/pinball_bg.png");
 
         s_oSpriteLibrary.addSprite("multiplier_light","./sprites/pinball_elements/multiplier_light.png");
         s_oSpriteLibrary.addSprite("multiplier_toggle_light","./sprites/pinball_elements/multiplier_toggle_light.png");
