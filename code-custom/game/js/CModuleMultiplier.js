@@ -88,7 +88,7 @@ function CModuleMultiplier(oSpriteContainer, oForeGroundContainer){
         for(var i=0; i<iNumMultiplierPerSide; i++){
             var oSprite = s_oSpriteLibrary.getSprite('multiplier_light');
             var oMult = new CLightIndicator(oSprite, i*112, i*54, oLeftIndicator);
-            oMult.addText("x"+iCont, 0, 0, 50, "#8416ff");
+            oMult.addText("x"+iCont, 0, 0, 50, "#DBF0FB"); // custom: end left
             oMult.rotate(25);
             _aMultiplierIndicator[iCont] = oMult;
             iCont++;
@@ -102,7 +102,7 @@ function CModuleMultiplier(oSpriteContainer, oForeGroundContainer){
         for(var i=0; i<iNumMultiplierPerSide; i++){
             var oSprite = s_oSpriteLibrary.getSprite('multiplier_light');
             var oMult = new CLightIndicator(oSprite, -i*112, i*54, oRightIndicator);
-            oMult.addText("x"+iCont, 0, 0, 50, "#8416ff");
+            oMult.addText("x"+iCont, 0, 0, 50, "#DBF0FB"); // custom: end right
             oMult.rotate(-25);
             _aMultiplierIndicator[iCont] = oMult;
             iCont++;
@@ -111,7 +111,7 @@ function CModuleMultiplier(oSpriteContainer, oForeGroundContainer){
         if(iCont === MAX_MULTIPLIER){
             var oSprite = s_oSpriteLibrary.getSprite('multiplier_light');
             var oMult = new CLightIndicator(oSprite, 0, 160, oMultIndicatorContainer);
-            oMult.addText("x"+iCont, 0, 0, 50, "#8416ff");
+            oMult.addText("x"+iCont, 0, 0, 50, "#F0F"); // custom: end right on ???
             _aMultiplierIndicator[iCont] = oMult;
         }
 

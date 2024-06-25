@@ -59,43 +59,43 @@ function CModuleRouter(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_0');
         var oLight = new CLightIndicator(oSprite, oPos.x-116, oPos.y+384, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#f947ce");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#DBF0FB"); // custom: left light 50
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_1');
         var oLight = new CLightIndicator(oSprite, oPos.x-116, oPos.y+316, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 20, "#55bdf5");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 20, "#DBF0FB"); // custom: left light 100
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_2');
         var oLight = new CLightIndicator(oSprite, oPos.x-116, oPos.y+248, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 18, "#73ec34");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 18, "#DBF0FB"); // custom: left light 200
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_3');
         var oLight = new CLightIndicator(oSprite, oPos.x-108, oPos.y+180, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 18, "#f2a937");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 18, "#DBF0FB"); // custom: left light 500
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_4');
         var oLight = new CLightIndicator(oSprite, oPos.x-84, oPos.y+120, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#f22935");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#DBF0FB"); // custom: left light 1k
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_5');
         var oLight = new CLightIndicator(oSprite, oPos.x-48, oPos.y+60, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#f3dc47");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#DBF0FB"); // custom: left light 2k
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
         
         var oSprite = s_oSpriteLibrary.getSprite('router_light_6');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y, oSpriteContainer);
-        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#9e2bf2");
+        oLight.addText(TEXT_ROUTER_VALUE[iTextValueCounter], 0, 0, 26, "#DBF0FB"); // custom: left light 5k
         iTextValueCounter++;
         _aScoreBonusLabel.push(oLight);
     };

@@ -121,7 +121,7 @@ function CModuleBumper(oSpriteContainer, oForeGroundContainer){
     ///////////////////////CIRCULAR BUMPER
     this.buildCircularBumper = function(oData){
         
-        _oBumperTextOutline = new createjs.Text(s_oScoreController.getBumperValue(),_iCircleBumperTextSize+"px "+PRIMARY_FONT, "#c6c6c6");
+        _oBumperTextOutline = new createjs.Text(s_oScoreController.getBumperValue(),_iCircleBumperTextSize+"px "+PRIMARY_FONT, "#004f71"); // custom: circular bumper score outline
         _oBumperTextOutline.x = 694;
         _oBumperTextOutline.y = 570;
         _oBumperTextOutline.rotation = -25;
@@ -131,7 +131,7 @@ function CModuleBumper(oSpriteContainer, oForeGroundContainer){
         _oBumperTextOutline.outline = 3;
         oSpriteContainer.addChild(_oBumperTextOutline);
         
-        _oBumperText = new createjs.Text(s_oScoreController.getBumperValue(),_iCircleBumperTextSize+"px "+PRIMARY_FONT, "#88028b");
+        _oBumperText = new createjs.Text(s_oScoreController.getBumperValue(),_iCircleBumperTextSize+"px "+PRIMARY_FONT, "#004f71"); // custom: circular bumper score fill
         _oBumperText.x = 694;
         _oBumperText.y = 570;
         _oBumperText.rotation = -25;
