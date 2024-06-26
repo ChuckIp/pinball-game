@@ -1,36 +1,19 @@
 // Save score - Save the score in the moodle database
 const saveScore = (currentScore) => {
-    const ENVIRONMENT = 'uat', // local, uat, prod
-        LOCAL_BASE_URL = 'http://localhost:8888/ask-alexa/amznlms/server/', // Chuck's Local
-        UAT_BASE_URL = 'https://uat.askalexa.com/',
-        PROD_BASE_URL = 'https://www.askalexa.com/',
-        WEBSERVICE_URL = 'webservice/rest/server.php',
+    const BASE_URL = '',
+        // BASE_URL = 'http://localhost:8888/ask-alexa/amznlms/server/', // TESTING - Chuck's Local
+        // BASE_URL = 'https://uat.askalexa.com/', // TESTING
+        // BASE_URL = 'https://www.askalexa.com/', // TESTING
+        WEBSERVICE_URL = '/webservice/rest/server.php',
         WS_TOKEN_ENDPOINT = '/local/wstoken/get_token.php?service=dataart',
         ADD_USER_SCORE_FUNCTION = 'local_iris_games_add_user_score',
         MOODLE_WS_REST_FORMAT = 'json';
 
     let WS_TOKEN  = '',
-        BASE_URL = '',
         sessionDuration = '';
 
     // Game Settings
     const GAME_ID = 1;
-
-    // Determine which base URL to use depeneding on the environment
-    switch (ENVIRONMENT) {
-        case 'local':
-            BASE_URL = LOCAL_BASE_URL;
-            break;
-        case 'uat':
-            BASE_URL = UAT_BASE_URL;
-            break;
-        case 'prod':
-            BASE_URL = PROD_BASE_URL;
-            break;
-        default:
-            BASE_URL = UAT_BASE_URL;
-            break;
-    }
 
     // Initialise the save the score function.
     const init = () => {
