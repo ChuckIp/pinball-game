@@ -106,13 +106,20 @@
                 headerHeight = totaraNav.offsetHeight;
             }
 
+            let width = '61vh';
+
             // For small mobile screens to remove black bars
             if (window.innerWidth <= 320) {
                 headerHeight = 100
             }
 
+            // reduce black bars on smaller screens
+            if (window.innerHeight <= 720) {
+                width = '50vh';
+            }
+
             iframe.style.height = `calc(100vh - ${headerHeight}px)`;
-            iframe.style.width = '550px';
+            iframe.style.width = `calc(${width})`;
         }
 
         // Initialise the JS
