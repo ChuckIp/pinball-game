@@ -1,22 +1,21 @@
-// Save score - Save the score in the moodle database
-const saveScore = (currentScore) => {
+// Get user high score - Save the score in the moodle database
+const getUserHighScore = () => {
     const ENVIRONMENT = 'uat', // local, uat, prod
         LOCAL_BASE_URL = 'http://localhost:8888/ask-alexa/amznlms/server/', // Chuck's Local
         UAT_BASE_URL = 'https://uat.askalexa.com/',
         PROD_BASE_URL = 'https://www.askalexa.com/',
         WEBSERVICE_URL = 'webservice/rest/server.php',
         WS_TOKEN_ENDPOINT = '/local/wstoken/get_token.php?service=dataart',
-        ADD_USER_SCORE_FUNCTION = 'local_iris_games_add_user_score',
+        GET_USER_SCORE_FUNCTION = 'local_iris_games_get_user',
         MOODLE_WS_REST_FORMAT = 'json';
 
     let WS_TOKEN  = '',
-        BASE_URL = '',
-        sessionDuration = '';
+        BASE_URL = '';
 
     // Game Settings
     const GAME_ID = 1;
 
-    // Determine which base URL to use depeneding on the environment
+    // Determine which base URL to use depending on the environment
     switch (ENVIRONMENT) {
         case 'local':
             BASE_URL = LOCAL_BASE_URL;
@@ -32,7 +31,7 @@ const saveScore = (currentScore) => {
             break;
     }
 
-    // Initialise the save the score function.
+    // Initialise the get user function.
     const init = () => {
         getWsToken();
     }
@@ -52,33 +51,24 @@ const saveScore = (currentScore) => {
             success: (response) => {
                 WS_TOKEN = response?.token;
 
-                // Calculate the session duration in seconds
-                sessionDuration = sessionTimer('end');
-
-                // Save the score
-                addUserScore();
+                // Get User details
+                getUser();
             }
         });
     }
 
     // Save the score in the moodle database
-    const addUserScore = () => {
+    const getUser = () => {
         $.ajax({
-            url: `${BASE_URL}${WEBSERVICE_URL}?wstoken=${WS_TOKEN}&wsfunction=${ADD_USER_SCORE_FUNCTION}&moodlewsrestformat=${MOODLE_WS_REST_FORMAT}`,
-            type: 'POST',
+            url: `${BASE_URL}${WEBSERVICE_URL}?wstoken=${WS_TOKEN}&wsfunction=${GET_USER_SCORE_FUNCTION}&moodlewsrestformat=${MOODLE_WS_REST_FORMAT}&gameid=${GAME_ID}`,
+            method: 'GET',
             dataType: MOODLE_WS_REST_FORMAT,
-            data: {
-                gameid: GAME_ID,
-                score: currentScore,
-                event: 'score',
-                session_duration: sessionDuration,
-            },
             error: (error) => {
-                console.warn(error)
+                console.warn(error);
             },
             success: (response) => {
-                // Get the high score from the database
-                s_iTotalScore = response?.high_score;
+                // Get the high score from the database and set it
+                s_iTotalScore = response?.high_score?.score;
             }
         });
     }
