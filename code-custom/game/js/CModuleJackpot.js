@@ -61,7 +61,7 @@ function CModuleJackpot(oSpriteContainer, oForeGroundContainer){
     this._addJackpotAmountIndicator = function(){       
         var iSize = 28;
         var iNum = 0;
-        _oJackpotText = new createjs.Text(iNum.toLocaleString(),iSize+"px "+SECONDARY_FONT, "#ff56b0");
+        _oJackpotText = new createjs.Text(iNum.toLocaleString(),iSize+"px "+SECONDARY_FONT, "#EE835D"); // custom: jackpot score
         _oJackpotText.x = 220;
         _oJackpotText.y = 388;
         _oJackpotText.textAlign = "center";

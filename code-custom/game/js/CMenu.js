@@ -26,8 +26,8 @@ function CMenu(){
      
         var oSprite = s_oSpriteLibrary.getSprite('but_credits');
         _pStartPosCredits = {x: (oSprite.width/2) + 10, y: (oSprite.height/2) + 10};            
-        _oCreditsBut = new CGfxButton(_pStartPosCredits.x,_pStartPosCredits.y,oSprite, s_oStage);
-        _oCreditsBut.addEventListener(ON_MOUSE_UP, this._onCreditsBut, this);
+        // _oCreditsBut = new CGfxButton(_pStartPosCredits.x,_pStartPosCredits.y,oSprite, s_oStage);
+        // _oCreditsBut.addEventListener(ON_MOUSE_UP, this._onCreditsBut, this);
      
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             var oSprite = s_oSpriteLibrary.getSprite('audio_icon');
@@ -47,14 +47,15 @@ function CMenu(){
 
         if (_fRequestFullScreen && screenfull.isEnabled){
             oSprite = s_oSpriteLibrary.getSprite("but_fullscreen")
-            _pStartPosFullscreen = {x:_pStartPosCredits.x + oSprite.width/2 + 10,y:(oSprite.height/2) + 10};
+            // _pStartPosFullscreen = {x:_pStartPosCredits.x + oSprite.width/2 + 10,y:(oSprite.height/2) + 10};
+            _pStartPosFullscreen = {x:_pStartPosCredits.x + oSprite.width/2 + 10 - (oSprite.width/2 + 10),y:(oSprite.height/2) + 10};
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen, s_oStage);
             _oButFullscreen.addEventListener(ON_MOUSE_UP,this._onFullscreenRelease,this);
         }
 
 
         var oSprite = s_oSpriteLibrary.getSprite('logo');
-        _oLogo = new CLightIndicator(oSprite, CANVAS_WIDTH_HALF, CANVAS_HEIGHT_HALF - 100, s_oStage);
+        _oLogo = new CLightIndicator(oSprite, CANVAS_WIDTH_HALF, CANVAS_HEIGHT_HALF - 70, s_oStage);
 
         var pOffset = {x: -170, y: -600};
         _aLetters = new Array();
@@ -86,7 +87,7 @@ function CMenu(){
         _oButPlay = null;
         _oFade.visible = false;
         
-        _oCreditsBut.unload();
+        // _oCreditsBut.unload();
         
         _oLogo.unload();
         for(var i=0; i<_aLetters.length; i++){
@@ -108,7 +109,7 @@ function CMenu(){
     };
     
     this.refreshButtonPos = function(iNewX,iNewY){
-        _oCreditsBut.setPosition(_pStartPosCredits.x + iNewX,iNewY + _pStartPosCredits.y);
+        // _oCreditsBut.setPosition(_pStartPosCredits.x + iNewX,iNewY + _pStartPosCredits.y);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
         }

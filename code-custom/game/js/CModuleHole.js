@@ -126,7 +126,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#EAEDED"); // custom: right light 1K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -134,7 +134,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+60, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 46, "#EAEDED"); // custom: right light 5K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -142,7 +142,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+120, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 36, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 36, "#EAEDED"); // custom: right light 10K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -150,7 +150,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+180, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 34, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 34, "#EAEDED"); // custom: right light 50K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -158,7 +158,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+240, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#EAEDED"); // custom: right light 100K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -166,7 +166,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_0');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+300, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#f68eff");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 26, "#EAEDED"); // custom: right light 500K
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -174,7 +174,7 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_2');
         var oLight = new CLightIndicator(oSprite, oPos.x, oPos.y+360, oSpriteContainer);
-        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 50, "#ff4040");
+        oLight.addText(TEXT_HOLE_VALUE[iTextValueCounter], 0, 0, 50, "#EAEDED"); // custom: right light 1M
         oLight.textRotate(-20);
         oLight.scale(0.68);
         iTextValueCounter++;
@@ -188,13 +188,13 @@ function CModuleHole(oSpriteContainer, oForeGroundContainer){
         //////////////////OTHER BONUS
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_1');
         _oShieldLight = new CLightIndicator(oSprite, 0, 0, oSpecialLabelContainer);
-        _oShieldLight.addPreciseText(TEXT_SHIELD, 0, 0, 20, "#000000", 90, 70)
+        _oShieldLight.addPreciseText(TEXT_SHIELD, 0, 0, 20, "#D84315", 90, 70) // custom: right light shield
         _oShieldLight.scale(0.7);
         _oShieldLight.rotate(25);
 
         var oSprite = s_oSpriteLibrary.getSprite('light_indicator_2');
         _oExtraBallLight = new CLightIndicator(oSprite, -28, 60, oSpecialLabelContainer);
-        _oExtraBallLight.addPreciseText(TEXT_EXTRABALL, 0, -2, 20, "#000000", 90, 70);
+        _oExtraBallLight.addPreciseText(TEXT_EXTRABALL, 0, -2, 20, "#7EF2E4", 90, 70); // custom: right light extra
         _oExtraBallLight.scale(0.7);
         _oExtraBallLight.rotate(25);
 

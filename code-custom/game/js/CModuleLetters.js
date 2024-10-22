@@ -206,7 +206,8 @@ function CModuleLetters(oSpriteContainer, oForeGroundContainer){
         _aLettersAlreadyLit = new Array();
         for(var i=0; i<7; i++){
             var oSprite = s_oSpriteLibrary.getSprite('letter_'+i);
-            var oLetter = new CLightIndicator(oSprite, LETTERS_POSITION[i].x, LETTERS_POSITION[i].y, oSpriteContainer);
+            // var oLetter = new CLightIndicator(oSprite, LETTERS_POSITION[i].x, LETTERS_POSITION[i].y, oSpriteContainer);
+            var oLetter = new CLightIndicator(oSprite, LETTERS_POSITION[i].x, 8888, oSpriteContainer); // hide
             _aLetters.push(oLetter);
             
             _aLettersLit[i] = false;
@@ -224,7 +225,8 @@ function CModuleLetters(oSpriteContainer, oForeGroundContainer){
     
     this._addLogo = function(){
         var oSprite = s_oSpriteLibrary.getSprite('logo');
-        _oLogo = new CLightIndicator(oSprite, 540, 1140, oSpriteContainer);
+        // _oLogo = new CLightIndicator(oSprite, 540, 1140, oSpriteContainer);
+        _oLogo = new CLightIndicator(oSprite, 540, 8140, oSpriteContainer); // hide
         
         this.animLogo();
     };

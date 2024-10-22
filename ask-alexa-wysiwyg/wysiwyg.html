@@ -1,0 +1,149 @@
+<div class="pinball-wysiwyg" style="">
+    <div class="pinball-wysiwyg__spacer">&nbsp;</div>
+    <h2>Welcome to Ask Alexa Pinball!</h2>
+    <p>This is an introductory sentence about the game and campaign rules.</p>
+    <p>
+        Prizes are on offer. For example if you are in the top 3 learners for your region you
+        win a package of Ask Alexa products including a free year of Amazon Prime membership.
+    </p>
+
+    <div class="pinball-wysiwyg__spacer">&nbsp;</div>
+
+    <h2>Terms and Conditions</h2>
+    <p>This is an example <strong>terms and conditions</strong>.</p>
+    <ul>
+        <li>Point 1 about things</li>
+        <li>Point 2 about new stuff</li>
+        <li>Three three three</li>
+        <li>4 4 4 4</li>
+    </ul>
+    <p>
+        This is some extra info about who is eligible for prizes and perhaps something about when prizes will be
+        fulfilled. This could be legalese or other kinds of information.
+    </p>
+    <ol>
+        <li>Point 1 about things</li>
+        <li>Point 2 about new stuff</li>
+        <li>Three three three</li>
+        <li>4 4 4 4</li>
+    </ol>
+    <p>
+        This is some more extra info about who is eligible for prizes and perhaps something about when prizes will be
+        fulfilled. This could be legalese or <a href="#">a link that goes somewhere</a> of information.
+    </p>
+
+    <div class="pinball-wysiwyg__spacer">&nbsp;</div>
+</div>
+<script>
+    // Init WYSIWYG Styling and JS
+    const initWysiwygPinball = () => {
+        const ELEMENTS = {
+            IFRAME : 'resourceobject',
+            TOTARA_NAV : '.totaraNav'
+        };
+
+        const iframe = document.getElementById(ELEMENTS.IFRAME),
+            totaraNav = document.querySelector(ELEMENTS.TOTARA_NAV);
+
+        if (!iframe) {
+            return false;
+        }
+
+        // Creates a new stylesheet and appends it to the head of the document.
+        const createStylesheet = () => {
+            $('style').text(`
+                .activityheader .h3 {
+                    display: none;
+                }
+
+                #page {
+                    padding: 0;
+                }
+
+                .pinball-wysiwyg {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                .pinball-wysiwyg__spacer {
+                    display: none;
+                }
+
+                #resourceobject {
+                    border: none;
+                    padding: 40px 0;
+                }
+
+                @media (min-width: 768px) {
+                    #page {
+                        padding: 0 20px;
+                    }
+
+                    .pinball-wysiwyg {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+
+                    .pinball-wysiwyg__spacer {
+                        display: block;
+                        padding-top:40px
+                    }
+
+                    #resourceobject {
+                        border: none;
+                        padding: 20px 0;
+                    }
+                }
+            `).appendTo('head');
+        }
+
+        // Resize the iframe
+        const resizeIframe = () => {
+            let headerHeight = 0;
+
+            // Calculate the height of the nav header
+            if (totaraNav && totaraNav.offsetHeight) {
+                headerHeight = totaraNav.offsetHeight;
+            }
+
+            let width = '61vh';
+
+            // For small mobile screens to remove black bars
+            if (window.innerWidth <= 320) {
+                headerHeight = 100
+            }
+
+            // reduce black bars on smaller screens
+            if (window.innerHeight <= 720) {
+                width = '50vh';
+            }
+
+            iframe.style.height = `calc(100vh - ${headerHeight}px)`;
+            iframe.style.width = `calc(${width})`;
+        }
+
+        // Initialise the JS
+        const init = () => {
+            createStylesheet();
+            resizeIframe();
+
+            // Add an event listener to the iframe, once loaded resize the iframe
+            iframe.addEventListener("load", function(){
+                setTimeout(() => {
+                    resizeIframe();
+                }, '100')
+            });
+
+            // On window resize, resize iframe
+            window.addEventListener('resize', function() {
+                setTimeout(() => {
+                    resizeIframe();
+                }, '1000')
+            });
+        }
+
+        init();
+    }
+
+    initWysiwygPinball();
+</script>
