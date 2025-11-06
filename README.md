@@ -1,6 +1,6 @@
-# Ask Alexa Pinball
+# Pinball
 
-Pinball Space Adventure game bought then customised for Ask Alexa.
+Pinball Space Adventure game bought then customised.
 
 ## Development
 
